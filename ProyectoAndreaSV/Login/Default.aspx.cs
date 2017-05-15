@@ -43,7 +43,11 @@ public partial class _Default : System.Web.UI.Page
     }
     protected void btn_categoria_Click(object sender, EventArgs e)
     {
-        Response.Redirect("P_CategoriaProducto.aspx");
+        Response.Redirect("P_Categoria.aspx");
     }
-   
+
+    protected void btn_producto_Click(object sender, EventArgs e)
+    {
+        Response.Redirect("P_Producto.aspx");
+    }
 }

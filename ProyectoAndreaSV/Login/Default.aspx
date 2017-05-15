@@ -20,7 +20,7 @@
         <asp:Button ID="btn_registro" runat="server" Text="Registro Usuario" OnClick="btn_registro_Click" />
         <asp:Button ID="btn_clientes" runat="server" Text="Clientes" OnClick="btn_clientes_Click" />
         <asp:Button ID="btn_categoria" runat="server" Text="Categoria" OnClick="btn_categoria_Click" />
-      
+        <asp:Button ID="btn_producto" runat="server" Text="Producto" OnClick="btn_producto_Click" />
     </div>
     </form>
 </body>
