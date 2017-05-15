@@ -11,22 +11,22 @@ namespace CapaNegocios
 {
     public class N_Producto1
     {
-        D_Producto objNegocioProducto = new D_Producto();
-        public int abmProducto(string pAccion, E_Producto objE_Producto)
-        {
-            return objNegocioProducto.abmProducto(pAccion, objE_Producto);
-        }
+        //D_Producto objNegocioProducto = new D_Producto();
+        //public int abmProducto(string pAccion, E_Producto objE_Producto)
+        //{
+        //    return objNegocioProducto.abmProducto(pAccion, objE_Producto);
+        //}
 
 
-        public DataSet productosLista()
-        {
-            return objNegocioProducto.productosLista();
-        }
+        //public DataSet productosLista()
+        //{
+        //    return objNegocioProducto.productosLista();
+        //}
 
-        public DataSet productoSeleccionado(int pIdProducto)
-        {
-            return objNegocioProducto.productoSeleccionado(pIdProducto);
-        }
+        //public DataSet productoSeleccionado(int pIdProducto)
+        //{
+        //    return objNegocioProducto.productoSeleccionado(pIdProducto);
+        //}
 
     }
 }

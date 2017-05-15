@@ -20,7 +20,8 @@ namespace CapaDatos
         {
 
         }
-
+        //Metodo que Insertar usuarios (Procedimiento)
+        #region Abm
         public int abcRegistro(E_Usuario objE_Usuario)
         {
             int Resultado = 0;
@@ -56,6 +57,9 @@ namespace CapaDatos
             }
             return Resultado;
         }
+        #endregion
 
     }
 }
+
+//falta crear procedimientos que modifiquen y eliminen usuario

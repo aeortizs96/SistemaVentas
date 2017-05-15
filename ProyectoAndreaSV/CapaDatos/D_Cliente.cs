@@ -17,7 +17,8 @@ namespace CapaDatos
         {
 
         }
-        //Insertar, Modifica y Elimina cliente
+        //Insertar, Modifica y Elimina cliente (Procedimiento)
+        #region Abm
         public int abmCliente(string pAccion, E_Cliente objE_Cliente)
         {
             int Resultado = 0;
@@ -48,8 +49,10 @@ namespace CapaDatos
             }
             return Resultado;
         }
+        #endregion
 
-        //muestra una lista completa de todos los clientes 
+        //muestra una lista completa de todos los clientes (Procedimiento)
+        #region Lista
         public DataSet listadoCliente()
         {
             SqlCommand cmd = new SqlCommand();
@@ -77,8 +80,10 @@ namespace CapaDatos
             }
             return ds;
         }
+        #endregion
 
-        //Permite seleccionar los clientes segun su id
+        //Permite seleccionar los clientes segun su id (Procedimiento)
+        #region Seleccion
         public DataSet seleccionaCliente(int pIdCliente)
         {
             SqlCommand cmd = new SqlCommand();
@@ -109,6 +114,7 @@ namespace CapaDatos
             }
             return ds;
         }
+        #endregion
 
 
 

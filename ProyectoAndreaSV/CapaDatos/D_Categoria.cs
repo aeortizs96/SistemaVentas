@@ -16,7 +16,8 @@ namespace CapaDatos
         {
 
         }
-        //Metodo que Insertar, Modifica y Elimina 
+        //Metodo que Insertar, Modifica y Elimina (Procedimiento)
+        #region Abm
         public int abmCategoria(string pAccion, E_Categoria objE_Categoria)
         {
             int Resultado = 0;
@@ -40,9 +41,11 @@ namespace CapaDatos
                 cmd.Dispose();
             }
             return Resultado;
-        }
+        } 
+        #endregion
 
-        //muestra una lista completa de todas las categorias 
+        //muestra una lista completa de todas las categorias (Procedimiento)
+        #region Lista
         public DataSet listadoCategoria()
         {
             SqlCommand cmd = new SqlCommand();
@@ -69,9 +72,11 @@ namespace CapaDatos
                 cmd.Dispose();
             }
             return ds;
-        }
+        } 
+        #endregion
 
-        //Permite seleccionar las categorias segun su id
+        //Permite seleccionar las categorias segun su id (Procedimiento)
+        #region Seleccion
         public DataSet seleccionaCategoria(int pIdCategoria)
         {
             SqlCommand cmd = new SqlCommand();
@@ -101,7 +106,8 @@ namespace CapaDatos
                 cmd.Dispose();
             }
             return ds;
-        }
+        } 
+        #endregion
 
 
 

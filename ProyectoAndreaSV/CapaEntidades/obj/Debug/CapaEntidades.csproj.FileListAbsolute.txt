@@ -7,3 +7,7 @@ D:\Cosas\ANDREA TODO\UNIVERSIDAD NUR\7 SEMESTRE\TALLER\PROYECTO\ProyectoAndreaSV
 D:\Cosas\ANDREA TODO\UNIVERSIDAD NUR\7 SEMESTRE\TALLER\PROYECTO\ProyectoAndreaSV\CapaEntidades\bin\Debug\CapaEntidades.pdb
 D:\Cosas\ANDREA TODO\UNIVERSIDAD NUR\7 SEMESTRE\TALLER\PROYECTO\ProyectoAndreaSV\CapaEntidades\obj\Debug\CapaEntidades.dll
 D:\Cosas\ANDREA TODO\UNIVERSIDAD NUR\7 SEMESTRE\TALLER\PROYECTO\ProyectoAndreaSV\CapaEntidades\obj\Debug\CapaEntidades.pdb
+C:\Users\ANDREA_ORTIZ\Desktop\b7.1-26-04-2017\b\ProyectoAndreaSV\CapaEntidades\bin\Debug\CapaEntidades.dll
+C:\Users\ANDREA_ORTIZ\Desktop\b7.1-26-04-2017\b\ProyectoAndreaSV\CapaEntidades\bin\Debug\CapaEntidades.pdb
+C:\Users\ANDREA_ORTIZ\Desktop\b7.1-26-04-2017\b\ProyectoAndreaSV\CapaEntidades\obj\Debug\CapaEntidades.dll
+C:\Users\ANDREA_ORTIZ\Desktop\b7.1-26-04-2017\b\ProyectoAndreaSV\CapaEntidades\obj\Debug\CapaEntidades.pdb
