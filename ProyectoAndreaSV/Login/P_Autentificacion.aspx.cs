@@ -8,7 +8,8 @@ using System.Web.Security;
 using System.Security.Cryptography;
 using System.Text;
 
-public partial class Login : System.Web.UI.Page
+
+public partial class P_Autentificacion : System.Web.UI.Page
 {
     protected void Page_Load(object sender, EventArgs e)
     {
@@ -39,7 +40,7 @@ public partial class Login : System.Web.UI.Page
 
     protected void LoginButton_Click(object sender, EventArgs e)
     {
-        if (chkRememberMe.Checked)
+        if (cbx2.Checked)
         {
             Response.Cookies["UserName"].Expires = DateTime.Now.AddDays(30);
             Response.Cookies["Password"].Expires = DateTime.Now.AddDays(30);
@@ -69,5 +70,5 @@ public partial class Login : System.Web.UI.Page
 
 
 
-    
+
 }

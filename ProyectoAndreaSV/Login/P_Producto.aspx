@@ -150,7 +150,7 @@
         <br />
         <br />
 
-        <asp:Button ID="btnShow" runat="server" Text="Show Modal Popup" />
+        <asp:Button ID="btnShow" runat="server" Text="Lista de Categorias" />
         <br />
         <br />
 
