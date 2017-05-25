@@ -61,6 +61,7 @@
             <a href="P_Producto.aspx" class="smoothScroll">Producto</a>
             <a href="P_Categoria.aspx" class="smoothScroll">Categoria</a>
             <a href="P_Registro.aspx" class="smoothScroll">Usuario</a>
+            <a href="P_Venta.aspx" class="smoothScroll">Venta</a>
             <a href="#"><i class="icon-facebook"></i></a>
             <a href="#"><i class="icon-twitter"></i></a>
             <a href="#"><i class="icon-dribbble"></i></a>

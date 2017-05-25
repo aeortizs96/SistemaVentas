@@ -7,7 +7,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title></title>
+    <title>Producto</title>
     <style type="text/css">
         .modalBackground {
             background-color: Black;
@@ -47,9 +47,9 @@
             <asp:Panel ID="pnlListadoProducto" runat="server" Direction="LeftToRight" Width="1077px" BackColor="#FFFFCC">
                 <br />
                 <asp:DropDownList ID="DropDownListProducto" runat="server" AppendDataBoundItems="true">
-                    <asp:ListItem Value="productoId">Codigo Producto</asp:ListItem>
-                    <asp:ListItem Value="nombre" Selected="True">Nombre Producto</asp:ListItem>
-                    <asp:ListItem Value="stock">Stock</asp:ListItem>
+                    <asp:ListItem Value="productoId" Text="Codigo Producto"></asp:ListItem>
+                    <asp:ListItem Value="nombre" Selected="True" Text="Nombre Producto"></asp:ListItem>
+                    <asp:ListItem Value="stock" Text="Stock"></asp:ListItem>
                 </asp:DropDownList>
                 <asp:TextBox ID="txt_busquedaProducto" runat="server" Width="50%"></asp:TextBox>
                 <asp:Button ID="btn_busquedaProducto" runat="server" Text="Buscar" OnClick="btn_busquedaProducto_Click" />
