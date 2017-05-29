@@ -1,4 +1,5 @@
-﻿using CapaEntidades;
+﻿
+using CapaEntidades;
 using CapaNegocios;
 using System;
 using System.Collections.Generic;
@@ -9,15 +10,16 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-public partial class P_Venta : System.Web.UI.Page
+public partial class P_DetalleVenta : System.Web.UI.Page
 {
 
     public E_Venta objEntVenta = new E_Venta();
     public N_Venta objNegVenta = new N_Venta();
 
-    public E_Cliente objEntCliente = new E_Cliente();
-    public N_Cliente objNegCliente = new N_Cliente();
+    public E_Producto objEntProducto = new E_Producto();
+    private N_Producto1 objNegProducto = new N_Producto1();
 
+    
     //conexion necesaria para el filtro
     public SqlConnection cn = new SqlConnection("Data Source=ANDREA\\SQLEXPRESS;Initial Catalog=SistemasDeVentas;Integrated Security=True");
 
@@ -118,8 +120,8 @@ public partial class P_Venta : System.Web.UI.Page
     // METODO QUE SEGUN LA FILA QUE SEA SELECCIONADA EN EL MODAL SE RELLENARAN LOS TXT DE LA PAGINA
     private void ObjetoATextBoxClienteVenta(DataSet ds)
     {
-        txt_clienteId.Text = ds.Tables[0].Rows[0]["clienteId"].ToString();
-        txt_nombreCliente.Text = ds.Tables[0].Rows[0]["nombres"].ToString() + " " + ds.Tables[0].Rows[0]["apellidos"].ToString();
+        txt_clienteId.Text = ds.Tables[0].Rows[0]["productoId"].ToString();
+        txt_nombreCliente.Text = ds.Tables[0].Rows[0]["descripcionP"].ToString() ;
     }
 
     //metodo que limpia todos los textbox de productos
@@ -296,7 +298,7 @@ public partial class P_Venta : System.Web.UI.Page
     private void ListadoCliente()
     {
         DataSet ds = new DataSet();
-        ds = objNegCliente.listadoCliente();
+        ds = objNegProducto.productosLista();
         if (ds.Tables[0].Rows.Count > 0)
         {
             grvListadoCliente.DataSource = ds.Tables[0];
@@ -313,7 +315,7 @@ public partial class P_Venta : System.Web.UI.Page
     {
         try
         {
-            String sql = "select * from tbl_Ventas where descripcion like '%" + txt_busqueda.Text + "%'";
+            String sql = "select * from tbl_Productos where descripcion like '%" + txt_busqueda.Text + "%'";
             SqlDataAdapter da = new SqlDataAdapter(sql, cn);
             DataTable dt = new DataTable();
             da.Fill(dt);
@@ -333,8 +335,8 @@ public partial class P_Venta : System.Web.UI.Page
 
 
         DataSet ds = new DataSet();
-        objEntCliente.ClienteId = Convert.ToInt32(grvListadoCliente.DataKeys[grvListadoCliente.SelectedIndex].Value.ToString());
-        ds = objNegCliente.seleccionaCliente(objEntCliente.ClienteId);
+        objEntProducto.ProductoId = Convert.ToInt32(grvListadoCliente.DataKeys[grvListadoCliente.SelectedIndex].Value.ToString());
+        ds = objNegProducto.productoSeleccionado(objEntProducto.ProductoId);
         if (ds.Tables[0].Rows.Count > 0)
         {
 

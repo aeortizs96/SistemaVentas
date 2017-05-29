@@ -11,7 +11,7 @@ namespace CapaEntidades
 
         #region Atributos
         private int _ventaId;
-        private int _clienteId;
+        private E_Cliente _clienteId;
         private string _fechaVenta;
         private string _numeroDocumento;
         private string _tipoDocumento;
@@ -21,7 +21,7 @@ namespace CapaEntidades
         public E_Venta()
         {
             _ventaId = 0;
-            _clienteId = 0;
+            _clienteId = new E_Cliente();
             _fechaVenta = string.Empty;
             _numeroDocumento = string.Empty;
             _tipoDocumento = string.Empty;
@@ -50,16 +50,22 @@ namespace CapaEntidades
             set { _tipoDocumento = value; }
         }
 
-        public int ClienteId
-        {
-            get { return _clienteId; }
-            set { _clienteId = value; }
-        }
+        //public int ClienteId
+        //{
+        //    get { return _clienteId; }
+        //    set { _clienteId = value; }
+        //}
 
         public string FechaVenta
         {
             get { return _fechaVenta; }
             set { _fechaVenta = value; }
+        }
+
+        public E_Cliente ClienteId
+        {
+            get { return _clienteId; }
+            set { _clienteId = value; }
         }
 
 

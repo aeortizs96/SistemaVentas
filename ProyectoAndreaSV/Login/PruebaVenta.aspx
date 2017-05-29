@@ -1,7 +1,6 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="P_Venta.aspx.cs" Inherits="P_Venta" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="PruebaVenta.aspx.cs" Inherits="PruebaVenta" %>
 
 <%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="cc1" %>
-
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -146,6 +145,7 @@
         <cc1:ModalPopupExtender ID="mp1" runat="server" PopupControlID="pnlListadoCliente" TargetControlID="btnShow"
             CancelControlID="btnClose" BackgroundCssClass="modalBackground">
         </cc1:ModalPopupExtender>
+
         <%--        <asp:Panel ID="PanelCategoria" runat="server">--%>
 
         <%--<asp:Button ID="btn_NuevaCategoria" runat="server" Text="Nuevo" Height="26px" OnClick="btn_NuevaCategoria_Click" />
@@ -174,3 +174,4 @@
 
 </body>
 </html>
+

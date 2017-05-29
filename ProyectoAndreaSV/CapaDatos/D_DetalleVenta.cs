@@ -10,28 +10,28 @@ using System.Data.SqlClient;
 
 namespace CapaDatos
 {
-    public class D_Venta : D_ConexionBD
+    public class D_DetalleVenta : D_ConexionBD
     {
-        public D_Venta()
+        public D_DetalleVenta()
         {
 
         }
 
         //Insertar, Modifica y Elimina Venta (Procedimiento)
         #region Abm
-        public int abmVenta(string pAccion, E_Venta objE_Venta)
+        public int abmDetalleVenta(string pAccion, E_DetalleVenta objE_DetalleVenta)
         {
-            
             int Resultado = 0;
-            SqlCommand cmd = new SqlCommand("usp_Ventas_abmVentas", Conexion);
+
+            SqlCommand cmd = new SqlCommand("usp_Ventas_abmDetalleVentas", Conexion);
             cmd.CommandType = CommandType.StoredProcedure;
             cmd.Parameters.AddWithValue("@Accion", pAccion);
-            cmd.Parameters.AddWithValue("@ventaId", objE_Venta.VentaId);
-            cmd.Parameters.AddWithValue("@clienteId", objE_Venta.ClienteId.ClienteId);
-            cmd.Parameters.AddWithValue("@fechaVenta", objE_Venta.FechaVenta);
-            cmd.Parameters.AddWithValue("@numeroDocumento", objE_Venta.NumeroDocumento);
-            cmd.Parameters.AddWithValue("@tipoDocumento", objE_Venta.TipoDocumento);
-           
+            cmd.Parameters.AddWithValue("@detalleId", objE_DetalleVenta.DetalleId);
+            cmd.Parameters.AddWithValue("@ventaId", objE_DetalleVenta.VentaId.VentaId);
+            cmd.Parameters.AddWithValue("@productoId", objE_DetalleVenta.ProductoId.ProductoId);
+            cmd.Parameters.AddWithValue("@cantidad", objE_DetalleVenta.Cantidad);
+            cmd.Parameters.AddWithValue("@precioUnitario", objE_DetalleVenta.PrecioUnitario);
+
             try
             {
                 AbrirConexion();
@@ -39,7 +39,7 @@ namespace CapaDatos
             }
             catch (Exception e)
             {
-                throw new Exception("Error al tratar de almacenar, Borrar o Modificar datos de Ventas", e);
+                throw new Exception("Error al tratar de almacenar, Borrar o Modificar datos de Detalle de Ventas", e);
             }
             finally
             {
@@ -50,9 +50,9 @@ namespace CapaDatos
         }
         #endregion
 
-        //muestra una lista completa de todas las ventas (Procedimiento)
+        //muestra una lista completa de todos los detalles de ventas (Procedimiento)
         #region Lista
-        public DataSet listadoVenta()
+        public DataSet listaDetalleVenta()
         {
             SqlCommand cmd = new SqlCommand();
             DataSet ds = new DataSet();
@@ -63,8 +63,8 @@ namespace CapaDatos
                 AbrirConexion();
                 cmd.Connection = Conexion;
                 cmd.CommandType = CommandType.StoredProcedure;
-                cmd.CommandText = "usp_Ventas_listadoVenta";
-                                 
+                cmd.CommandText = "usp_Ventas_listadoDetalleVenta";
+
 
                 da.SelectCommand = cmd;
                 da.Fill(ds);
@@ -82,9 +82,9 @@ namespace CapaDatos
         }
         #endregion
 
-        //Permite seleccionar las ventas segun su id (Procedimiento)
+        //Permite seleccionar los detalles de ventas segun su id (Procedimiento)
         #region Seleccion
-        public DataSet seleccionaVenta(int pIdVenta)
+        public DataSet seleccionaDetalleVenta(int pIdDetalleVenta)
         {
             SqlCommand cmd = new SqlCommand();
             DataSet ds = new DataSet();
@@ -96,16 +96,16 @@ namespace CapaDatos
                 cmd.Connection = Conexion;
                 cmd.CommandType = CommandType.StoredProcedure;
 
-                cmd.CommandText = "usp_Ventas_seleccionaVenta";
+                cmd.CommandText = "usp_Ventas_seleccionaDetalleVenta";
 
-                cmd.Parameters.AddWithValue("@ventaId", pIdVenta);
+                cmd.Parameters.AddWithValue("@detalleId", pIdDetalleVenta);
 
                 da.SelectCommand = cmd;
                 da.Fill(ds);
             }
             catch (Exception e)
             {
-                throw new Exception("Error al solicitar los datos de Ventas ", e);
+                throw new Exception("Error al solicitar los datos de Detalle de ventas ", e);
             }
             finally
             {
@@ -115,6 +115,5 @@ namespace CapaDatos
             return ds;
         }
         #endregion
-
     }
 }

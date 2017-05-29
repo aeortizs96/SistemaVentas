@@ -1,9 +1,8 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="P_Venta.aspx.cs" Inherits="P_Venta" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="P_DetalleVenta.aspx.cs" Inherits="P_DetalleVenta" %>
 
 <%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="cc1" %>
 
 <!DOCTYPE html>
-
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -157,11 +156,18 @@
             <asp:TextBox ID="txt_busqueda" runat="server" Width="50%"></asp:TextBox>
             <asp:Button ID="btn_busqueda" runat="server" Text="Buscar" OnClick="btn_busqueda_Click" />
             <br />
-            <asp:GridView ID="grvListadoCliente" runat="server" AutoGenerateColumns="False" DataKeyNames="clienteId" HorizontalAlign="Center" Width="90%" OnSelectedIndexChanged="grvListadoCliente_SelectedIndexChanged">
+            <asp:GridView ID="grvListadoCliente" runat="server" AutoGenerateColumns="False" DataKeyNames="productoId" HorizontalAlign="Center" Width="90%" OnSelectedIndexChanged="grvListadoCliente_SelectedIndexChanged">
                 <Columns>
-                    <asp:BoundField DataField="clienteId" HeaderText="Codigo" />
-                    <asp:BoundField DataField="nombres" HeaderText="Nombre" />
-                    <asp:BoundField DataField="apellidos" HeaderText="Apellido" />
+                    <asp:BoundField DataField="productoId" HeaderText="Producto" />
+                    <asp:BoundField DataField="categoriaId" HeaderText="Categoria" />
+                    <asp:BoundField DataField="nombre" HeaderText="Nombre" />
+                    <asp:BoundField DataField="descripcionP" HeaderText="Descripcion" />
+                    <asp:BoundField DataField="stock" HeaderText="Stock" />
+                    <asp:BoundField DataField="precioCompra" HeaderText="Precio Compra" />
+                    <asp:BoundField DataField="precioVenta" HeaderText="Precio Venta" />
+                    <asp:BoundField DataField="fechaVencimiento" HeaderText="Fecha Vencimiento" />
+                    <asp:BoundField DataField="fechaCreado" HeaderText="Fecha Creado" />
+                     <asp:BoundField DataField="imagen" HeaderText="Fecha Imagen" />
                     <asp:CommandField ShowSelectButton="True" />
                 </Columns>
             </asp:GridView>

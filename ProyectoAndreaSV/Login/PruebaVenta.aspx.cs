@@ -9,7 +9,8 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-public partial class P_Venta : System.Web.UI.Page
+
+public partial class PruebaVenta : System.Web.UI.Page
 {
 
     public E_Venta objEntVenta = new E_Venta();
@@ -181,8 +182,8 @@ public partial class P_Venta : System.Web.UI.Page
         VaciaTextBoxVenta();
         DesHabilitarBotonesVenta();
         DesHabilitarTexBoxVenta();
-
-
+        
+       
 
         if (nGrabados != -1)
             //Response.Write("<script>window.alert('AVISO: Venta insertada correctamente.')</script>");

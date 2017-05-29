@@ -14,6 +14,10 @@
 
 
 
+         <a href="P_PaginaInicio.aspx" class="smoothScroll">Inicio</a>
+
+
+
             <br />
             <br />
             <asp:Panel ID="PanelCategoria" runat="server">

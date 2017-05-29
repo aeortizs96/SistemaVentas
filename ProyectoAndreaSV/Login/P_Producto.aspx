@@ -37,7 +37,7 @@
         <asp:ScriptManager ID="ScriptManager1" runat="server">
         </asp:ScriptManager>
 
-
+          <a href="P_PaginaInicio.aspx" class="smoothScroll">Inicio</a>
         <asp:Panel ID="PanelProducto" runat="server">
             <asp:Button ID="btn_NuevoProducto" runat="server" Text="Nuevo" OnClick="btn_NuevoProducto_Click" />
             <asp:Button ID="btn_limpieza" runat="server" Text="Limpiar" OnClick="btn_limpieza_Click" />

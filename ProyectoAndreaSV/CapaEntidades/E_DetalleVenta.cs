@@ -11,8 +11,8 @@ namespace CapaEntidades
 
         #region Atributos
         private int _detalleId;
-        private int _ventaId;
-        private int _productoId;
+        private E_Venta _ventaId;
+        private E_Producto _productoId;
         private double _cantidad;
         private double _precioUnitario;
         #endregion
@@ -22,8 +22,8 @@ namespace CapaEntidades
         {
 
             _detalleId = 0;
-            _ventaId = 0;
-            _productoId = 0;
+            _ventaId = new E_Venta();
+            _productoId = new E_Producto();
             _cantidad = 0;
             _precioUnitario = 0;
         }
@@ -37,17 +37,6 @@ namespace CapaEntidades
         }
 
 
-        public int VentaId1
-        {
-            get { return _ventaId; }
-            set { _ventaId = value; }
-        }
-        public int ProductoId1
-        {
-            get { return _productoId; }
-            set { _productoId = value; }
-        }
-
         public double Cantidad
         {
             get { return _cantidad; }
@@ -59,6 +48,30 @@ namespace CapaEntidades
             get { return _precioUnitario; }
             set { _precioUnitario = value; }
         }
+
+        public E_Venta VentaId
+        {
+            get { return _ventaId; }
+            set { _ventaId = value; }
+        }
+
+        //public int VentaId
+        //{
+        //    get { return _ventaId; }
+        //    set { _ventaId = value; }
+        //}
+        //public int ProductoId
+        //{
+        //    get { return _productoId; }
+        //    set { _productoId = value; }
+        //}
+
+        public E_Producto ProductoId
+        {
+            get { return _productoId; }
+            set { _productoId = value; }
+        }
+
         #endregion
 
 

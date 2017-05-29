@@ -10,6 +10,7 @@
 <body>
     <form id="form1" runat="server">
         <div>
+              <a href="P_PaginaInicio.aspx" class="smoothScroll">Inicio</a>
             <br />
             <asp:Button ID="btn_NuevoCliente" runat="server" Text="Nuevo" OnClick="btn_NuevoCliente_Click" />
 
